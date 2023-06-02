@@ -1,0 +1,135 @@
+Exception on /LSTM_text_Upload [POST]
+Traceback (most recent call last):
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\pandas\core\indexes\base.py", line 3802, in get_loc
+    return self._engine.get_loc(casted_key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pandas\_libs\index.pyx", line 138, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 165, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5745, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 5753, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Tweet'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\LEVEL PLATINUM\_full_Challenge Platinum_Annisa_\API-Platinum.py", line 327, in uploadDoc_lstm
+    text = row['Tweet']
+           ~~~^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\pandas\core\series.py", line 981, in __getitem__
+    return self._get_value(key)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\pandas\core\series.py", line 1089, in _get_value
+    loc = self.index.get_loc(label)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\pandas\core\indexes\base.py", line 3804, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Tweet'
+Exception on /LSTM_text_input [POST]
+Traceback (most recent call last):
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\LEVEL PLATINUM\_full_Challenge Platinum_Annisa_\API-Platinum Annisa.py", line 265, in lstm_text_input
+    tokenizer.fit([hasil])
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\sklearn\feature_extraction\text.py", line 2103, in fit
+    X = super().fit_transform(raw_documents)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\sklearn\feature_extraction\text.py", line 1388, in fit_transform
+    vocabulary, X = self._count_vocab(raw_documents, self.fixed_vocabulary_)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\sklearn\feature_extraction\text.py", line 1294, in _count_vocab
+    raise ValueError(
+ValueError: empty vocabulary; perhaps the documents only contain stop words
+Exception on /LSTM_text_input [POST]
+Traceback (most recent call last):
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\LEVEL PLATINUM\_full_Challenge Platinum_Annisa_\API-Platinum Annisa.py", line 269, in lstm_text_input
+    text_transformed = pad_sequences(text_sequence, maxlen=MAX_SEQUENCE_LENGTH)
+                                                           ^^^^^^^^^^^^^^^^^^^
+NameError: name 'MAX_SEQUENCE_LENGTH' is not defined
+Exception on /LSTM_text_input [POST]
+Traceback (most recent call last):
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\LEVEL PLATINUM\_full_Challenge Platinum_Annisa_\API-Platinum Annisa.py", line 269, in lstm_text_input
+    text_transformed = pad_sequences(text_sequence, maxlen=MAX_SEQUENCE_LENGTH)
+                                                           ^^^^^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'MAX_SEQUENCE_LENGTH' where it is not associated with a value
+Exception on /LSTM_text_input [POST]
+Traceback (most recent call last):
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\LEVEL PLATINUM\_full_Challenge Platinum_Annisa_\API-Platinum Annisa.py", line 265, in lstm_text_input
+    tokenizer.fit_on_texts([hasil])
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TfidfVectorizer' object has no attribute 'fit_on_texts'
+Exception on /input_NN [POST]
+Traceback (most recent call last):
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\envLEVELPLATINUM\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\A BINAR ACADEMY BOOTCAMP\COURSE\LEVEL PLATINUM\_full_Challenge Platinum_Annisa_\API-Platinum Annisa.py", line 150, in nn_text
+    loaded_model = pickle.load(open(loaded_model_path, "rb"))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\A BINAR ACADEMY BOOTCAMP\\COURSE\\LEVEL PLATINUM\\_full_Challenge Platinum_Annisa_\\feature_New3.sav'
